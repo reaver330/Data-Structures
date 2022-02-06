@@ -32,6 +32,16 @@ namespace DataStructures
                 Root.traverse();
         }
 
+        /// <summary>
+        /// copies the whole b-tree's keys to the provided list
+        /// </summary>
+        /// <param name="results"></param>
+        public void CopyToList(List<long> results)
+        {
+            if (Root != null)
+                Root.CopyToList(results);
+        }
+
         public KeyValuePair<B_TreeNode, int>? Search(int k)
         {
             return SearchSubtree(Root, k);

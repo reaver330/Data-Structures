@@ -44,6 +44,25 @@ namespace DataStructures
             }
         }
 
+        public void CopyToList(List<long> results)
+        {
+            long i;
+            for (i = 0; i < n; i++)
+            {
+                if (!isLeaf)
+                {
+                    children[i].CopyToList(results);
+                }
+                System.Console.Write($" {keys[i]}");
+                results.Add(keys[i]);
+            }
+
+            if (!isLeaf)
+            {
+                children[i].CopyToList(results);
+            }
+        }
+
         public void insertIntoNonFullNode(long k)
         {
             long CHILD_IS_FULL = (2 * t) - 1;
