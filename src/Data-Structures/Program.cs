@@ -12,6 +12,7 @@ namespace DataStructures
         {
             HashTable();
             B_tree();
+            CircularLinkedList();
             LinkedList();
         }
 
@@ -44,7 +45,7 @@ namespace DataStructures
             Console.WriteLine("Hash-table search elapsed time: " + elapsedTime);
         }
 
-        private static void LinkedList()
+        private static void CircularLinkedList()
         {
             Console.WriteLine("Hello Circular-Doubly-Linked-List World!");
 
@@ -77,6 +78,39 @@ namespace DataStructures
             
         }
 
+        private static void LinkedList()
+        {
+            Console.WriteLine("Hello Doubly-Linked-List World!");
+
+            LinkedList ll = new LinkedList();
+
+            Stopwatch sw = new Stopwatch();
+
+            sw.Start();
+
+            for (long l = 0; l <= TEN_MILLION; l++)
+            {
+                ll.Insert(l);
+            }
+
+            TimeSpan ts = sw.Elapsed;
+            string elapsedTime = $"{ts.Hours}:{ts.Minutes}:{ts.Seconds}:{ts.Milliseconds}ms";
+            sw.Stop();
+
+            Console.WriteLine("Doubly-Linked-List Insert elapsed time: " + elapsedTime);
+
+            sw = Stopwatch.StartNew();
+
+            LinkedListNode s = ll.Search(1);
+
+            TimeSpan ts1 = sw.Elapsed;
+            elapsedTime = $"{ts1.Hours}:{ts1.Minutes}:{ts1.Seconds}:{ts1.Milliseconds}ms. ({ts1.Ticks}ticks)";
+            sw.Stop();
+
+            Console.WriteLine("Doubly-Linked-List search elapsed time: " + elapsedTime);
+
+        }
+
         private static void B_tree()
         {
             Console.WriteLine("Hello B-tree World!");
@@ -101,7 +135,7 @@ namespace DataStructures
 
             sw = Stopwatch.StartNew();
 
-            KeyValuePair<B_TreeNode, int>? pair = bt.Search(1);
+            KeyValuePair<B_TreeNode, long>? pair = bt.Search(1);
             TimeSpan ts1 = sw.Elapsed;
             elapsedTime = $"{ts1.Hours}:{ts1.Minutes}:{ts1.Seconds}:{ts1.Milliseconds}ms. ({ts1.Ticks}ticks)";
             sw.Stop();

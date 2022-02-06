@@ -19,14 +19,15 @@ namespace Data_StructureTests
         }
 
         [Fact]
-        public void SearchTenMillionKeys()
+        public void InsertAndSearchTenMillionKeys()
         {
             DataStructures.HashTable ht = new DataStructures.HashTable(TEN_MILLION);
             for (long l = 0; l <= TEN_MILLION; l++)
             {
                 ht.Insert(l);
             }
-            ht.Search(1);
+            long? s = ht.Search(1);
+            Assert.True(s == 1);
         }
 
         [Fact]

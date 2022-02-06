@@ -10,6 +10,11 @@ namespace Data_StructureTests
         private const int TEN_MILLION = 10000000;
         private B_tree bt;
 
+        public B_Tree()
+        {
+            InsertTenMillionKeys();
+        }
+
         [Fact]
         public void TraverseFullTree()
         {
@@ -67,8 +72,9 @@ namespace Data_StructureTests
         {
             try
             {
-                InsertTenMillionKeys();
-                bt.Search(1);
+                KeyValuePair<B_TreeNode, long>? s = bt.Search(1);
+                Assert.True(s is not null);
+                Assert.True((s.Value).Value == 1);
             }
             catch(Exception ex)
             {

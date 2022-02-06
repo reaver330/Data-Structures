@@ -19,14 +19,15 @@ namespace Data_StructureTests
         }
 
         [Fact]
-        public void SearchTenMillionKeys()
+        public void InsertAndSearchTenMillionKeys()
         {
             DataStructures.CircularLinkedList ll = new DataStructures.CircularLinkedList();
             for (long l = 0; l <= TEN_MILLION; l++)
             {
                 ll.Insert(l);
             }
-            ll.Search(1);
+            LinkedListNode s = ll.Search(1);
+            Assert.True(s.key == 1);
         }
 
         [Fact]

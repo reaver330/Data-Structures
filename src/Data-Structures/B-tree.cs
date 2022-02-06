@@ -42,7 +42,7 @@ namespace DataStructures
                 Root.CopyToList(results);
         }
 
-        public KeyValuePair<B_TreeNode, int>? Search(int k)
+        public KeyValuePair<B_TreeNode, long>? Search(long k)
         {
             return SearchSubtree(Root, k);
         }
@@ -52,7 +52,7 @@ namespace DataStructures
         /// </summary>
         /// <param name="k">the key to search for</param>
         /// <returns>a pair containing the node that holds k and the index i of k in the nodes keys</returns>
-        private  KeyValuePair<B_TreeNode,int>? SearchSubtree(B_TreeNode x, int k)
+        private  KeyValuePair<B_TreeNode,long>? SearchSubtree(B_TreeNode x, long k)
         {
             int i = 0;
             while( (i < x.n) && (k > x.keys[i]))
@@ -61,7 +61,7 @@ namespace DataStructures
             }
             if(k == x.keys[i])
             {
-                return new KeyValuePair<B_TreeNode, int>(x, i);
+                return new KeyValuePair<B_TreeNode, long>(x, k);
             }
             else
             {
