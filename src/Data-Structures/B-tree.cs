@@ -19,7 +19,7 @@ namespace DataStructures
         /// </summary>
         public B_tree(int degree)
         {
-            if (degree < 2)
+            if (degree+1 < 2)
                 throw new ApplicationException("b-tree degree must be 2 or greater");
 
             this.Root = null;
