@@ -4,17 +4,17 @@ var _head:number;
 var _length:number;
 
 newQueue(3);
-enqueue(1);
-enqueue(2);
-enqueue(3);
-enqueue(4);
-enqueue(5); //overflow
+Enqueue(1);
+Enqueue(2);
+Enqueue(3);
+Enqueue(4);
+Enqueue(5); //overflow
 
-console.log(dequeue());
-console.log(dequeue());
-console.log(dequeue());
-console.log(dequeue());
-console.log(dequeue());//underflow
+console.log(Dequeue());
+console.log(Dequeue());
+console.log(Dequeue());
+console.log(Dequeue());
+console.log(Dequeue());//underflow
 
 function isFull():boolean
 {
@@ -40,18 +40,20 @@ function newQueue(size:number)
     _length = size;
 }
 
-function enqueue(newItem:number)
+function Enqueue(newItem:number)
 {
     if(isFull())
     {
         console.log("Cannot enqueue. Full");
-        return null;
     }
     _queueArray[_tail] = newItem;
-    _tail++;
+    if(_tail == _length)
+        _tail =1;
+    else
+        _tail++;
 }
 
-function dequeue():number
+function Dequeue():number
 {
     if(isEmpty())
     {
@@ -59,6 +61,9 @@ function dequeue():number
         return null;
     }
     var item:number = _queueArray[_head];
-    _head++;
+    if (_head == _length)
+        _head = 1;
+    else
+        _head++;
     return item;
 }
