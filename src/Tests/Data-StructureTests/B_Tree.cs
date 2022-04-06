@@ -82,5 +82,56 @@ namespace Data_StructureTests
             }
             Assert.True(true);//pass
         }
+
+        [Fact]
+        public void InsertDuplicateKeys()
+        {
+            try
+            {
+                bt = new B_tree(1);
+
+                for (long l = 1; l <= 3; l++)
+                {
+                    bt.Insert(l);
+                }
+
+                for (long l = 1; l <= 3; l++)
+                {
+                    bt.Insert(l);
+                }
+            }
+            catch (Exception ex)
+            {
+                Xunit.Assert.True(false, $"Insert failed: {ex.Message}");//fail
+            }
+            Assert.True(true);//pass
+        }
+
+        [Fact]
+        public void InsertDuplicateAndSearchThemKeys()
+        {
+            try
+            {
+                bt = new B_tree(2);
+
+                for (long l = 1; l <= 3; l++)
+                {
+                    bt.Insert(l);
+                }
+
+                for (long l = 1; l <= 3; l++)
+                {
+                    bt.Insert(l);
+                }
+                KeyValuePair<B_TreeNode, long>? s = bt.Search(1);
+                Assert.True(s is not null);
+                Assert.True((s.Value).Value == 1);
+            }
+            catch (Exception ex)
+            {
+                Xunit.Assert.True(false, $"Insert failed: {ex.Message}");//fail
+            }
+            Assert.True(true);//pass
+        }
     }
 }
