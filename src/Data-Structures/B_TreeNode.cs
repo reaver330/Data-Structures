@@ -14,7 +14,7 @@ namespace DataStructures
     {
         public long[] keys { get; set; }
         public B_TreeNode[] children { get; set; }
-        public int n { get; set; }
+        public int n { get; set; } //the number of children of the node
         public Boolean isLeaf { get; set; }
         int t = 0;
         public B_TreeNode(int t, Boolean isLeaf)
