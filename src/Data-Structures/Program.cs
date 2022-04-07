@@ -114,7 +114,7 @@ namespace DataStructures
         private static void B_tree()
         {
             Console.WriteLine("Hello B-tree World!");
-            B_tree bt = new B_tree(2);
+            B_tree bt = new B_tree(1000);
             Stopwatch sw = new Stopwatch();
 
             sw.Start();
