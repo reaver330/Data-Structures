@@ -1,0 +1,67 @@
+Myx509ASN DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+
+  Certificate ::= SEQUENCE {
+    tbsCertificate        TBSCertificate,
+    signatureAlgorithm    AlgorithmIdentifier,
+    signatureValue        BIT STRING
+  }
+
+  TBSCertificate ::= SEQUENCE {
+    version           [0] EXPLICIT Version DEFAULT v1,
+    serialNumber          CertificateSerialNumber,
+    signature             AlgorithmIdentifier,
+    issuer                Name,
+    validity              Validity,
+    subject               Name,
+    subjectPublicKeyInfo  SubjectPublicKeyInfo,
+    issuerUniqueID    [1] IMPLICIT UniqueIdentifier OPTIONAL,
+    subjectUniqueID   [2] IMPLICIT UniqueIdentifier OPTIONAL,
+    extensions        [3] EXPLICIT Extentions OPTIONAL
+  }
+
+  Name ::= CHOICE {
+    RDNSequence }
+
+  RDNSequence ::= SEQUENCE OF RelativeDistinguishedName
+  RelativeDistinguishedName ::= SET OF AttributeTypeAndValue
+
+  AttributeTypeAndValue ::= SEQUENCE {
+    type     AttributeType,
+    value    AttributeValue }
+
+  AttributeType ::= OBJECT IDENTIFIER
+
+  AttributeValue ::= ANY DEFINED BY AttributeType
+
+  Version ::=  INTEGER { v1(0), v2(1), v3(2) }
+
+  Time ::= CHOICE {
+    utcTime       UTCTime,
+    generalTime   GeneralizedTime
+  }
+
+  UniqueIdentifier ::= BIT STRING
+
+  SubjectPublicKeyInfo  ::=   SEQUENCE {
+    algorithm                 AlgorithmIdentifier,
+    subjectPublicKey          BIT STRING
+  }
+
+  Extentions ::=  SEQUENCE SIZE (1..MAX) OF Extension
+
+  Extension ::= SEQUENCE {
+    extnID    OBJECT IDENTIFIER,
+    critical  BOOLEAN DEFAULT FALSE,
+    extnValue OCTET STRING
+  }
+
+  CertificateSerialNumber ::=  INTEGER
+
+  AlgorithmIdentifier  ::=  SEQUENCE  {
+    algorithm               OBJECT IDENTIFIER,
+    parameters              ANY DEFINED BY algorithm OPTIONAL  }
+
+  Validity                        ::=     SEQUENCE {
+    notBefore            Time,
+    notAfter             Time }
+END
