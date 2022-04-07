@@ -1,0 +1,157 @@
+{
+    "Building": [
+        {
+            "Building_id": 1,
+            "Name": "Patton Building",
+            "Appartment_cnt" : 300,
+            "Floor_cnt": 6,
+            "Has_lobby": true,
+            "level_of_security": "middling",
+            "basement_parking_floors": 3,
+            "Basement_parking_clr": "pink",
+            "Basement_floor": 1
+        },
+        {
+            "Building_id": 2,
+            "Name": "Patton Building",
+            "Appartment_cnt" : 300,
+            "Floor_cnt": 6,
+            "Has_lobby": true,
+            "level_of_security": "middling",
+            "basement_parking_floors": 3,
+            "Basement_parking_clr": "azure",
+            "Basement_floor": 2
+        },
+        {
+            "Building_id": 3,
+            "Name": "Patton Building",
+            "Appartment_cnt" : 300,
+            "Floor_cnt": 6,
+            "Has_lobby": true,
+            "level_of_security": "middling",
+            "basement_parking_floors": 3,
+            "Basement_parking_clr": "vermillion",
+            "Basement_floor": 3
+        },
+        {
+            "Building_id": 4,
+            "Name": "Botha Building",
+            "Appartment_cnt" : 200,
+            "Floor_cnt": null,
+            "Has_lobby": true,
+            "level_of_security": "high",
+            "basement_parking_floors": 4,
+            "Basement_parking_clr": "red",
+            "Basement_floor": 1
+        },
+        {
+            "Building_id": 5,
+            "Name": "Botha Building",
+            "Appartment_cnt" : 200,
+            "Floor_cnt": null,
+            "Has_lobby": true,
+            "level_of_security": "high",
+            "basement_parking_floors": 4,
+            "Basement_parking_clr": "blue",
+            "Basement_floor": 2
+        },
+        {
+            "Building_id": 6,
+            "Name": "Botha Building",
+            "Appartment_cnt" : 200,
+            "Floor_cnt": null,
+            "Has_lobby": true,
+            "level_of_security": "high",
+            "basement_parking_floors": 4,
+            "Basement_parking_clr": "green",
+            "Basement_floor": 3
+        },
+        {
+            "Building_id": 7,
+            "Name": "Botha Building",
+            "Appartment_cnt" : 200,
+            "Floor_cnt": null,
+            "Has_lobby": true,
+            "level_of_security": "high",
+            "basement_parking_floors": 4,
+            "Basement_parking_clr": "orange",
+            "Basement_floor": 4
+        }
+    ],
+    "Refurbishment" : [
+        { 
+            "Refurb_id" : 1,
+            "Building_id": 1,
+            "Refurb_contractor_name" : "Freds Refurbs",
+            "Refurb_cnt": 10,
+            "Penthouse_refurb_cost": 300
+        },
+        { 
+            "Refurb_id" : 2,
+            "Building_id": 2,
+            "Refurb_contractor_name" : "Freds Refurbs",
+            "Refurb_cnt": 10,
+            "Penthouse_refurb_cost": 300
+        },
+        { 
+            "Refurb_id" : 3,
+            "Building_id": 3,
+            "Refurb_contractor_name" : "Freds Refurbs",
+            "Refurb_cnt": 10,
+            "Penthouse_refurb_cost": 300
+        },
+        { 
+            "Refurb_id" : 4,
+            "Building_id": 1,
+            "Refurb_contractor_name" : "Bobs Refurbs",
+            "Refurb_cnt": 10,
+            "Penthouse_refurb_cost": 100
+        },
+        { 
+            "Refurb_id" : 5,
+            "Building_id": 2,
+            "Refurb_contractor_name" : "Bobs Refurbs",
+            "Refurb_cnt": 10,
+            "Penthouse_refurb_cost": 100
+        },
+        { 
+            "Refurb_id" : 6,
+            "Building_id": 3,
+            "Refurb_contractor_name" : "Bobs Refurbs",
+            "Refurb_cnt": 10,
+            "Penthouse_refurb_cost": 100
+        }
+    ],
+    "Penthouse": [
+        {
+            "Penthouse_id": 2,
+            "Building_id": 1,
+            "Penthouse_name" : "Chris Patton Penthouse"
+        },
+        {
+            "Penthouse_id": 3,
+            "Building_id": 2,
+            "Penthouse_name" : "Chris Patton Penthouse"
+        },
+        {
+            "Penthouse_id": 4,
+            "Building_id": 3,
+            "Penthouse_name" : "Chris Patton Penthouse"
+        },
+        {
+            "Penthouse_id": 5,
+            "Building_id": 1,
+            "Penthouse_name" : "Frank Patton Penthouse"
+        },
+        {
+            "Penthouse_id": 5,
+            "Building_id": 2,
+            "Penthouse_name" : "Frank Patton Penthouse"
+        },
+        {
+            "Penthouse_id": 5,
+            "Building_id": 3,
+            "Penthouse_name" : "Frank Patton Penthouse"
+        }
+    ]
+}

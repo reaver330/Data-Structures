@@ -1,0 +1,111 @@
+{
+    "Building": [
+        {
+            "Building_id": 1,
+            "Name": "Patton Building",
+            "Appartment_cnt" : 300,
+            "Floor_cnt": 6,
+            "Has_lobby": true,
+            "level_of_security": "middling",
+            "basement_parking_floors": 3,
+            "Parkingbays_cnt": 150
+        },
+        {
+            "Building_id": 2,
+            "Name": "Botha Building",
+            "Appartment_cnt" : 200,
+            "Floor_cnt": null,
+            "Has_lobby": true,
+            "level_of_security": "high",
+            "basement_parking_floors": 4,
+            "Parkingbays_cnt": 200
+        }
+    ],
+    "Refurbishment" : [
+        { 
+            "Refurb_id" : 1,
+            "Building_id": 2,
+            "Refurb_contractor_name" : "Bobs Refurbs",
+            "Refurb_cnt": 10
+        },
+        { 
+            "Refurb_id" : 2,
+            "Building_id": 1,
+            "Refurb_contractor_name" : "Bobs Refurbs",
+            "Refurb_cnt": 3
+        },
+        { 
+            "Refurb_id" : 3,
+            "Building_id": 2,
+            "Refurb_contractor_name" : "Freds Refurbs",
+            "Refurb_cnt": 10
+        },
+        { 
+            "Refurb_id" : 4,
+            "Building_id": 1,
+            "Refurb_contractor_name" : "Freds Refurbs",
+            "Refurb_cnt": 6
+        }
+    ],
+    "Penthouse_refurb": [
+        {
+            "Penthouse_id":1,
+            "Refurb_id": 1,
+            "Penthouse_refurb_cost": 100.00
+        },
+        {
+            "Penthouse_id":2,
+            "Refurb_id": 3,
+            "Penthouse_refurb_cost": 300.00
+        }
+    ],
+    "Penthouse": [
+        {
+            "Penthouse_id": 1,
+            "Building_id": 1,
+            "Penthouse_name" : "Chris Patton Penthouse"
+        },
+        {
+            "Penthouse_id": 2,
+            "Building_id": 1,
+            "Penthouse_name" : "Frank Patton Penthouse"
+        }
+    ],
+    "Basement_floor": [
+        {
+            "Basement_floor_id": 1,
+            "Building_id": 1,
+            "Basement_parking_clr": "pink"
+        },
+        {
+            "Basement_floor_id": 2,
+            "Building_id": 1,
+            "Basement_parking_clr": "azure"
+        },
+        {
+            "Basement_floor_id": 3,
+            "Building_id": 1,
+            "Basement_parking_clr": "vermilion"
+        },
+        {
+            "Basement_floor_id": 1,
+            "Building_id": 2,
+            "Basement_parking_clr": "red"
+        },
+        {
+            "Basement_floor_id": 2,
+            "Building_id": 2,
+            "Basement_parking_clr": "blue"
+        },
+        {
+            "Basement_floor_id": 3,
+            "Building_id": 2,
+            "Basement_parking_clr": "green"
+        },
+        {
+            "Basement_floor_id": 4,
+            "Building_id": 2,
+            "Basement_parking_clr": "orange"
+        }
+    ]
+}

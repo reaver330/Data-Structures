@@ -1,0 +1,200 @@
+{
+    "Building": [
+        {
+            "Building_id": 1,
+            "Name": "Patton Building",
+            "Appartment_cnt" : 300,
+            "Floor_cnt": 6,
+            "Has_lobby": true,
+            "level_of_security": "middling",
+            "basement_parking_floors": 3,
+            "Parkingbays_cnt": 150
+        },
+        {
+            "Building_id": 2,
+            "Name": "Botha Building",
+            "Appartment_cnt" : 200,
+            "Floor_cnt": null,
+            "Has_lobby": true,
+            "level_of_security": "high",
+            "basement_parking_floors": 4,
+            "Parkingbays_cnt": 200
+        }
+    ],
+    "Refurb_contractor": [
+        {
+            "Contractor_id": 1,
+            "Refurb_contractor_name":"Bobs Refurbs"
+        },
+        {
+            "Contractor_id": 2,
+            "Refurb_contractor_name": "Freds Refurbs"
+        }
+    ],
+    "Building_contractor" : [
+        { 
+            "Building_id": 2,
+            "Contractor_id" : 1
+        },
+        { 
+            "Building_id": 1,
+            "Contractor_id" : 1
+        },
+        { 
+            "Building_id": 2,
+            "Contractor_id" : 2
+        },
+        { 
+            "Building_id": 1,
+            "Contractor_id" : 2
+        }
+    ],
+    "Contractor_refurb": [
+        {
+            "Contractor_id": 1,
+            "Refurb_id": 1,
+            "Refurb_cnt": 10
+        },
+        {
+            "Contractor_id": 1,
+            "Refurb_id": 2,
+            "Refurb_cnt": 3
+        },
+        {
+            "Contractor_id": 2,
+            "Refurb_id": 3,
+            "Refurb_cnt": 10
+        }, {
+            "Contractor_id": 2,
+            "Refurb_id": 4,
+            "Refurb_cnt": 6
+        }
+    ],
+    "Refurbs": [
+        {
+            "Refurb_id":1,
+            "Refurb_description":"Bobs Refurbs working on the Botha building"
+        },
+        {
+            "Refurb_id":2,
+            "Refurb_description":"Bobs Refurbs working on the Patton building"
+        },
+        {
+            "Refurb_id":3,
+            "Refurb_description":"Freds Refurbs working on the Botha building"
+        },
+        {
+            "Refurb_id":4,
+            "Refurb_description":"Freds Refurbs working on the Patton building"
+        }
+    ],
+    "Building_refurbs": [
+        {
+            "Refurb_id":1,
+            "Buuilding_id":2
+        },
+        {
+            "Refurb_id":2,
+            "Refurb_description":1
+        },
+        {
+            "Refurb_id":3,
+            "Refurb_description":2
+        },
+        {
+            "Refurb_id":4,
+            "Refurb_description":1
+        }
+    ],
+    "Penthouse_refurb": [
+        {
+            "Penthouse_id":1,
+            "Contractor_id": 1,
+            "Penthouse_refurb_cost": 100.00
+        },
+        {
+            "Penthouse_id":2,
+            "Contractor_id": 2,
+            "Penthouse_refurb_cost": 300.00
+        }
+    ],
+    "Penthouse": [
+        {
+            "Penthouse_id": 1,
+            "Building_id": 1,
+            "Penthouse_name" : "Chris Patton Penthouse"
+        },
+        {
+            "Penthouse_id": 2,
+            "Building_id": 1,
+            "Penthouse_name" : "Frank Patton Penthouse"
+        }
+    ],
+    "Basement_floor": [
+        {
+            "Basement_floor_id": 1,
+            "Building_id": 1,
+            "Colour_id": 1
+        },
+        {
+            "Basement_floor_id": 2,
+            "Building_id": 1,
+            "Colour_id": 2
+        },
+        {
+            "Basement_floor_id": 3,
+            "Building_id": 1,
+            "Colour_id": 3
+        },
+        {
+            "Basement_floor_id": 1,
+            "Building_id": 2,
+            "Colour_id": 4
+        },
+        {
+            "Basement_floor_id": 2,
+            "Building_id": 2,
+            "Colour_id": 5
+        },
+        {
+            "Basement_floor_id": 3,
+            "Building_id": 2,
+            "Colour_id": 6
+        },
+        {
+            "Basement_floor_id": 4,
+            "Building_id": 2,
+            "Colour_id": 7
+        }
+    ],
+    "Colour": [
+        {
+            "Colour_id" :1,
+            "Colour": "pink"
+        },
+        {
+            "Colour_id" :2,
+            "Colour": "azure"
+        },
+        {
+            "Colour_id" :3,
+            "Colour": "vermilion"
+        },
+        {
+            "Colour_id" :4,
+            "Colour": "red"
+        },
+        {
+            "Colour_id" :5,
+            "Colour": "blue"
+        },
+        {
+            "Colour_id" :6,
+            "Colour": "green"
+        },
+        {
+            "Colour_id" :7,
+            "Colour": "orange"
+        }
+    ]
+}
